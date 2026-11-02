@@ -335,6 +335,7 @@ html{color-scheme:light}
 </style>
 </head>
 <body>
+<form name="rooplab-feedback" data-netlify="true" netlify-honeypot="bot-field" hidden aria-hidden="true"><input type="hidden" name="form-name" value="rooplab-feedback"><input name="bot-field"><input name="tester_id"><input name="date"><input name="name"><input name="role"><input name="country"><input name="field"><input name="experience"><input name="mode_used"><input name="product"><input name="sus_score"><input name="sus_answers"><input name="usefulness"><input name="most_useful"><input name="confusing_or_missing"><input name="recommend"><input name="session_product"><input name="session_category"><input name="session_market"><input name="session_mode"><input name="answers_given"><input name="carbon_kg"><input name="circularity"><textarea name="interview"></textarea></form>
 <header class="site">
   <div class="wrap topbar">
     <a class="brand" href="#home" aria-label="RoopLab home"><svg width="26" height="26" viewBox="0 0 30 30" aria-hidden="true"><circle cx="15" cy="15" r="11.5" fill="none" stroke="var(--accent)" stroke-width="2.6" stroke-dasharray="56 18" stroke-linecap="round"/><circle cx="15" cy="15" r="3.6" fill="var(--signal)"/></svg>RoopLab</a>
@@ -1546,12 +1547,19 @@ Most useful: ${f.best}
 Confusing or missing: ${f.worse}
 Recommend: ${f.add||"-"}`}
 let lastFb=null;
+async function sendFbOnline(f){const st=$("#fbScore");if(!/netlify\.app$/.test(location.hostname)&&!/rooplab/.test(location.hostname))return;
+  try{const s=S.brief?exportData().session:null,a=S.analysis,C=a?carbonOf(a):null,M=a?mciOf(a):null;
+    const iv=(S.display||[]).filter(m=>m.who!=="sys").map(m=>(m.who==="me"?"User: ":"RoopLab: ")+m.text).join("\n").slice(0,8000);
+    const data={"form-name":"rooplab-feedback",tester_id:f.id,date:f.date,name:f.name||"",role:f.role,country:f.country,field:f.field,experience:f.exp,mode_used:f.mode,product:f.product||"",sus_score:String(f.susScore),sus_answers:f.sus.join(","),usefulness:f.tool.join(","),most_useful:f.best,confusing_or_missing:f.worse,recommend:f.add||"",
+      session_product:S.brief?S.brief.name:"",session_category:S.brief?catLabel(S.brief):"",session_market:S.brief?S.brief.sold:"",session_mode:S.demo?"case study: "+S.demo:(typeof aiMode!=="undefined"?aiMode:""),answers_given:String(S.answers||0),carbon_kg:C?fmt(C.lo)+"-"+fmt(C.hi):"",circularity:M?M.mci.toFixed(2):"",interview:iv};
+    const r=await fetch("/",{method:"POST",headers:{"Content-Type":"application/x-www-form-urlencoded"},body:new URLSearchParams(data).toString()});
+    if(r.ok)st.textContent+=" Your feedback was sent to the researcher automatically. You can still download your results below."}catch(e){}}
 $("#fbForm").addEventListener("change",()=>$("#e-fb").textContent="");
 $("#fbForm").addEventListener("submit",e=>{e.preventDefault();const f=readFb(),miss=[];
   if(!f.role||!f.country||!f.field||!f.exp||!f.mode)miss.push("all fields in section 1");if(f.sus.some(v=>v==null))miss.push("all 10 usability statements");if(f.tool.some(v=>v==null))miss.push("all 8 usefulness statements");if(!f.best||!f.worse)miss.push("the two required text questions");if(!f.consent)miss.push("the consent box");
   if(miss.length){$("#e-fb").textContent="Please complete "+miss.join(", ")+".";return}
   f.susScore=susScore(f.sus);lastFb=f;S.feedback=f;save();$("#fbScore").textContent=`Thank you. Your usability score: ${f.susScore} of 100 (${susWord(f.susScore)}).`;
-  $("#fbWa").href="https://wa.me/?text="+encodeURIComponent(fbText(f));$("#fbResult").hidden=false;$("#fbResult").scrollIntoView({behavior:"smooth",block:"center"})});
+  $("#fbWa").href="https://wa.me/?text="+encodeURIComponent(fbText(f));$("#fbResult").hidden=false;sendFbOnline(f);$("#fbResult").scrollIntoView({behavior:"smooth",block:"center"})});
 $("#fbCopy").addEventListener("click",async()=>{if(!lastFb)return;try{await navigator.clipboard.writeText(fbText(lastFb));toast("Answers copied. Paste them into a message to the researcher.")}catch(e){toast("Copy is blocked here. Use Send on WhatsApp or Download.")}});
 document.addEventListener("click",e=>{if(e.target.closest("[data-results]"))downloadResults()});
 $("#resultsBtn").addEventListener("click",downloadResults);
