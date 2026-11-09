@@ -26,7 +26,7 @@ h1,h2,h3{margin:0;text-wrap:balance}
 h1,h2,.serif{font-family:var(--font-display);font-weight:600;letter-spacing:-.025em}
 h1{font-size:clamp(38px,5.4vw,68px);line-height:1.04}
 h2{font-size:clamp(26px,3vw,38px);line-height:1.12}
-h3{font-family:var(--font-body);font-size:17px;font-weight:600;line-height:1.35}
+h3{font-family:var(--font-body);font-size:18px;font-weight:600;line-height:1.35}
 h1 em,h2 em{font-style:normal;color:var(--accent)}
 p{margin:0}
 a{color:inherit}
@@ -34,7 +34,7 @@ button,input,select,textarea{font:inherit;color:inherit}
 :focus-visible{outline:2px solid var(--signal);outline-offset:3px}
 .wrap{max-width:1200px;margin:0 auto;padding:0 24px}
 .narrow{max-width:760px}
-.muted{color:var(--muted)} .small{font-size:14px} .tiny{font-size:12.5px}
+.muted{color:var(--muted)} .small{font-size:14px} .tiny{font-size:13px}
 .label{font-size:12px;font-weight:600;letter-spacing:.09em;text-transform:uppercase;color:var(--muted)}
 .label.acc{color:var(--accent)}
 .row{display:flex;gap:12px;flex-wrap:wrap;align-items:center}
@@ -46,13 +46,13 @@ button,input,select,textarea{font:inherit;color:inherit}
 /* header */
 header.site{position:sticky;top:0;z-index:5;background:color-mix(in srgb,var(--paper) 92%,transparent);backdrop-filter:blur(8px);border-bottom:1px solid var(--line)}
 .topbar{display:flex;align-items:center;gap:18px;min-height:64px}
-.brand{display:flex;align-items:center;gap:9px;text-decoration:none;font-family:var(--font-display);font-weight:600;font-size:21px;letter-spacing:-.02em;line-height:1}
+.brand{display:flex;align-items:center;gap:9px;text-decoration:none;font-family:var(--font-display);font-weight:600;font-size:20px;letter-spacing:-.02em;line-height:1}
 .navlinks{display:flex;gap:4px;margin-left:auto;flex-wrap:wrap}
-.navlinks a{text-decoration:none;font-size:14.5px;color:var(--muted);padding:8px 11px;border-radius:8px}
+.navlinks a{text-decoration:none;font-size:14px;color:var(--muted);padding:8px 11px;border-radius:8px}
 .navlinks a:hover{color:var(--ink)}
 .navlinks a.on{color:var(--ink);background:var(--sunk)}
 .btn.menu-btn{display:none;margin-left:auto}
-@media (max-width:1100px){.navlinks{display:none;position:absolute;left:0;right:0;top:64px;background:var(--surface);border-bottom:1px solid var(--line);flex-direction:column;padding:10px 24px}.navlinks.open{display:flex}.btn.menu-btn{display:inline-flex}.topbar .btn.cta{display:none}}
+@media (max-width:860px){.navlinks{display:none;position:absolute;left:0;right:0;top:64px;background:var(--surface);border-bottom:1px solid var(--line);flex-direction:column;padding:10px 24px}.navlinks.open{display:flex}.btn.menu-btn{display:inline-flex}.topbar .btn.cta{display:none}}
 .btn{display:inline-flex;align-items:center;justify-content:center;gap:8px;border:1px solid var(--line);background:var(--surface);border-radius:10px;padding:11px 20px;font-weight:500;font-size:15px;cursor:pointer;text-decoration:none;transition:border-color .15s,background .15s,transform .15s}
 .btn:hover{border-color:var(--accent)}
 .btn.primary{background:var(--accent);border-color:var(--accent);color:var(--accent-ink)}
@@ -60,7 +60,7 @@ header.site{position:sticky;top:0;z-index:5;background:color-mix(in srgb,var(--p
 .btn.acc{background:var(--accent);border-color:var(--accent);color:var(--accent-ink)}
 .btn.ghost{background:transparent;border-color:transparent;color:var(--muted)}
 .btn.ghost:hover{color:var(--ink)}
-.btn.sm{padding:7px 14px;font-size:13.5px}
+.btn.sm{padding:7px 14px;font-size:13px}
 .btn:disabled{opacity:.45;cursor:not-allowed;transform:none}
 main{min-height:70vh}
 .page{display:none}.page.on{display:block;animation:fade .3s ease}
@@ -75,16 +75,16 @@ section.block:last-child{border-bottom:0}
 .pill{display:inline-block;font-size:12px;font-weight:600;padding:3px 10px;border-radius:99px;background:var(--sunk);color:var(--muted)}
 .pill.high{background:#F5DDD6;color:#8A2E1D}.pill.medium{background:var(--signal-soft);color:var(--signal)}.pill.low{background:var(--accent-soft);color:var(--accent)}
 .pill.acc{background:var(--accent-soft);color:var(--accent)}
-.note{background:var(--signal-soft);border-radius:14px;padding:16px 18px;font-size:14.5px}
+.note{background:var(--signal-soft);border-radius:14px;padding:16px 18px;font-size:14px}
 /* home */
 .hero{padding:84px 0 64px}
 .hero-grid{display:grid;grid-template-columns:1.15fr .85fr;gap:48px;align-items:center}
 @media (max-width:960px){.hero-grid{grid-template-columns:1fr}}
-.hero p.lead{font-size:19px;color:var(--muted);max-width:52ch;margin:22px 0 30px}
+.hero p.lead{font-size:20px;color:var(--muted);max-width:52ch;margin:22px 0 30px}
 .stat{font-family:var(--font-display);font-weight:600;font-size:52px;letter-spacing:-.03em;line-height:1;color:var(--accent)}
 .steps-strip{display:grid;grid-template-columns:repeat(4,1fr);border-top:2px solid var(--accent)}
 .steps-strip>div{padding:20px 20px 0 0}
-.steps-strip b{font-family:var(--font-display);font-size:22px;font-weight:600;display:block;margin-bottom:6px;color:var(--accent)}
+.steps-strip b{font-family:var(--font-display);font-size:24px;font-weight:600;display:block;margin-bottom:6px;color:var(--accent)}
 @media (max-width:800px){.steps-strip{grid-template-columns:1fr 1fr;gap:10px}}
 .case-card{display:grid;grid-template-rows:auto 1fr;overflow:hidden;padding:0}
 .case-card .art{background:var(--sunk);display:grid;place-items:center;aspect-ratio:16/10}
@@ -99,7 +99,7 @@ section.block:last-child{border-bottom:0}
 .stepper button.on i{background:var(--ink);color:var(--paper);border-color:var(--ink)}
 .stepper button.done i{background:var(--accent);color:var(--accent-ink);border-color:var(--accent)}
 .stepper button:disabled{opacity:.4;cursor:not-allowed}
-.badge{display:inline-flex;align-items:center;gap:7px;font-size:12.5px;font-weight:600;padding:5px 11px;border-radius:99px;background:var(--sunk);color:var(--muted)}
+.badge{display:inline-flex;align-items:center;gap:7px;font-size:13px;font-weight:600;padding:5px 11px;border-radius:99px;background:var(--sunk);color:var(--muted)}
 .badge i{width:7px;height:7px;border-radius:50%;background:currentColor}
 .badge.live{background:var(--accent-soft);color:var(--accent)}
 .badge.demo{background:var(--signal-soft);color:var(--signal)}
@@ -116,7 +116,7 @@ input:focus,select:focus,textarea.in:focus{border-color:var(--accent);outline:no
 .err{color:var(--danger);font-size:13px;margin-top:5px}
 .err:empty{display:none}
 .chips{display:flex;flex-wrap:wrap;gap:7px;margin-top:9px}
-.chip{border:1px solid var(--line);background:var(--surface);border-radius:99px;padding:6px 13px;font-size:13.5px;cursor:pointer}
+.chip{border:1px solid var(--line);background:var(--surface);border-radius:99px;padding:6px 13px;font-size:13px;cursor:pointer}
 .chip:hover{border-color:var(--ink)}
 .tiers{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:10px}
 @media (max-width:640px){.tiers{grid-template-columns:1fr}}
@@ -128,11 +128,11 @@ input:focus,select:focus,textarea.in:focus{border-color:var(--accent);outline:no
 .tier:has(input:focus-visible){outline:2px solid var(--signal)}
 .drop{border:1px dashed var(--line);border-radius:14px;padding:14px;display:flex;gap:14px;align-items:center;background:var(--surface)}
 .drop img{width:76px;height:76px;object-fit:cover;border-radius:10px;border:1px solid var(--line)}
-.chatgrid{display:grid;grid-template-columns:minmax(0,1.05fr) minmax(0,.95fr);gap:20px;align-items:start}
+.chatgrid{display:grid;grid-template-columns:minmax(0,1.65fr) minmax(300px,1fr);gap:20px;align-items:start}
 @media (max-width:980px){.chatgrid{grid-template-columns:1fr}}
 .chat{display:flex;flex-direction:column;height:min(740px,80vh);padding:0;overflow:hidden}
 .chat-head{display:flex;align-items:center;gap:12px;padding:16px 20px;border-bottom:1px solid var(--line)}
-.avatar{width:36px;height:36px;border-radius:10px;background:var(--accent);color:var(--accent-ink);display:grid;place-items:center;font-family:var(--font-display);font-weight:600;font-size:17px}
+.avatar{width:36px;height:36px;border-radius:10px;background:var(--accent);color:var(--accent-ink);display:grid;place-items:center;font-family:var(--font-display);font-weight:600;font-size:18px}
 .msgs{flex:1;overflow-y:auto;padding:20px;display:flex;flex-direction:column;gap:12px}
 .msg{max-width:85%;padding:12px 15px;border-radius:16px;white-space:pre-wrap;word-wrap:break-word;font-size:15px}
 .msg.ai{background:var(--sunk);border-top-left-radius:5px;align-self:flex-start}
@@ -161,11 +161,11 @@ input:focus,select:focus,textarea.in:focus{border-color:var(--accent);outline:no
 .an-hero{display:grid;grid-template-columns:1fr auto;gap:30px;align-items:end;padding:30px 0 34px;border-bottom:1px solid var(--line)}
 @media (max-width:720px){.an-hero{grid-template-columns:1fr}}
 .index{font-family:var(--font-display);font-weight:600;letter-spacing:-.04em;font-size:72px;line-height:.9;color:var(--accent);text-align:right}
-.index small{font-size:26px;color:var(--muted)}
+.index small{font-size:28px;color:var(--muted)}
 @media (max-width:720px){.index{text-align:left}}
 .an-sec{padding:40px 0;border-bottom:1px solid var(--line)}
 .an-sec>.row.between{margin-bottom:20px}
-table.t{width:100%;border-collapse:collapse;font-size:14.5px}
+table.t{width:100%;border-collapse:collapse;font-size:14px}
 table.t th,table.t td{text-align:left;padding:11px 10px;border-bottom:1px solid var(--line);vertical-align:top}
 table.t th{font-size:12px;letter-spacing:.06em;text-transform:uppercase;color:var(--muted);font-weight:600}
 table.t td.num{font-variant-numeric:tabular-nums;text-align:center}
@@ -186,7 +186,7 @@ table.t td.num{font-variant-numeric:tabular-nums;text-align:center}
 .life>div{padding:16px 16px 0 0}
 @media (max-width:900px){.life{grid-template-columns:1fr 1fr}}
 .swatches{display:flex;gap:0;border-radius:14px;overflow:hidden;height:86px;border:1px solid var(--line)}
-.swatches div{flex:1;display:flex;align-items:flex-end;padding:8px;font-size:11px;font-family:ui-monospace,monospace}
+.swatches div{flex:1;display:flex;align-items:flex-end;padding:8px;font-size:12px;font-family:ui-monospace,monospace}
 .log{display:flex;flex-direction:column;gap:0}
 .log div{display:grid;grid-template-columns:62px 1fr;gap:12px;padding:9px 0;border-bottom:1px solid var(--line);font-size:14px}
 .log time{color:var(--muted);font-variant-numeric:tabular-nums;font-size:13px}
@@ -196,11 +196,11 @@ table.t td.num{font-variant-numeric:tabular-nums;text-align:center}
 .paperwrap{background:var(--sunk);border-radius:18px;padding:26px;overflow-x:auto}
 /* research & method */
 .persona{display:flex;flex-direction:column;gap:10px}
-.persona .ava{width:46px;height:46px;border-radius:50%;display:grid;place-items:center;font-family:var(--font-display);font-size:22px;background:var(--accent-soft);color:var(--accent)}
+.persona .ava{width:46px;height:46px;border-radius:50%;display:grid;place-items:center;font-family:var(--font-display);font-size:24px;background:var(--accent-soft);color:var(--accent)}
 .diamond{width:100%;height:auto}
-.critcard .n{font-family:var(--font-display);font-weight:600;font-size:30px;line-height:1;color:var(--accent)}
+.critcard .n{font-family:var(--font-display);font-weight:600;font-size:32px;line-height:1;color:var(--accent)}
 .versus{display:grid;grid-template-columns:1fr 40px 1fr;gap:12px;align-items:stretch}
-.versus .arrow{display:grid;place-items:center;font-family:var(--font-display);font-size:30px;color:var(--muted)}
+.versus .arrow{display:grid;place-items:center;font-family:var(--font-display);font-size:32px;color:var(--muted)}
 @media (max-width:760px){.versus{grid-template-columns:1fr}.versus .arrow{transform:rotate(90deg)}}
 .likert{display:grid;grid-template-columns:1fr repeat(5,44px);gap:6px;align-items:center;padding:10px 0;border-bottom:1px solid var(--line)}
 .likert label{display:grid;place-items:center;font-size:12px;color:var(--muted);cursor:pointer}
@@ -211,7 +211,7 @@ details.faq summary{cursor:pointer;font-weight:600}
 details.faq p{margin-top:8px;color:var(--muted)}
 .toast{position:fixed;left:50%;bottom:24px;transform:translateX(-50%);background:var(--ink);color:var(--paper);padding:11px 18px;border-radius:99px;font-size:14px;opacity:0;pointer-events:none;transition:opacity .2s;z-index:9}
 .toast.on{opacity:1}
-footer{border-top:1px solid var(--line);padding:30px 0 40px;font-size:13.5px;color:var(--muted)}
+footer{border-top:1px solid var(--line);padding:30px 0 40px;font-size:13px;color:var(--muted)}
 .sr{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0)}
 
 
@@ -223,21 +223,21 @@ footer{border-top:1px solid var(--line);padding:30px 0 40px;font-size:13.5px;col
 .progress-list li.done .dot{background:var(--accent);border-color:var(--accent)}
 .progress-list li.now .dot{border-color:var(--accent);box-shadow:0 0 0 3px var(--accent-soft)}
 .progress-list li.now{font-weight:600}
-.facts{max-height:300px;overflow-y:auto;font-size:13.5px}
-.facts h4{margin:12px 0 4px;font-size:11.5px;letter-spacing:.08em;text-transform:uppercase;color:var(--muted);font-weight:600}
+.facts{max-height:300px;overflow-y:auto;font-size:13px}
+.facts h4{margin:12px 0 4px;font-size:12px;letter-spacing:.08em;text-transform:uppercase;color:var(--muted);font-weight:600}
 .facts h4:first-child{margin-top:0}
 .facts p{margin:2px 0;padding-left:10px;border-left:2px solid var(--accent-soft)}
-.qhead{font-size:12.5px;color:var(--muted);padding:10px 20px 0}
+.qhead{font-size:13px;color:var(--muted);padding:10px 20px 0}
 .range{position:relative;height:10px;background:var(--sunk);border-radius:9px}
 .range span{position:absolute;top:0;bottom:0;background:var(--accent);border-radius:9px;opacity:.85}
 .carbon-row{display:grid;grid-template-columns:minmax(140px,1.2fr) 2fr 130px;gap:14px;align-items:center;padding:9px 0;border-bottom:1px solid var(--line);font-size:14px}
 @media (max-width:640px){.carbon-row{grid-template-columns:1fr}}
 .gauge{position:relative;height:14px;border-radius:9px;background:linear-gradient(90deg,#F6D4CC,#F3EBC8,#D8EFB0)}
 .gauge i{position:absolute;top:-6px;width:3px;height:26px;background:var(--ink);border-radius:2px}
-.gauge-scale{display:flex;justify-content:space-between;font-size:11.5px;color:var(--muted);margin-top:6px}
+.gauge-scale{display:flex;justify-content:space-between;font-size:12px;color:var(--muted);margin-top:6px}
 .bignum{font-family:var(--font-display);font-weight:600;letter-spacing:-.03em;font-size:44px;line-height:1;color:var(--accent)}
 .bignum small{font-size:20px;color:var(--muted)}
-.status{display:inline-block;font-size:11.5px;font-weight:600;padding:2px 9px;border-radius:99px;white-space:nowrap}
+.status{display:inline-block;font-size:12px;font-weight:600;padding:2px 9px;border-radius:99px;white-space:nowrap}
 .status.Mandatory{background:#F5DDD6;color:#8A2E1D}
 .status.Voluntary{background:var(--accent-soft);color:var(--accent)}
 .status.Check{background:var(--signal-soft);color:var(--signal)}
@@ -247,12 +247,12 @@ footer{border-top:1px solid var(--line);padding:30px 0 40px;font-size:13.5px;col
 .spec div{padding:9px 8px 9px 0;font-size:13px}
 .spec b{display:block;font-family:var(--font-display);font-weight:600;font-size:18px;line-height:1.1;color:var(--ink)}
 .tags{display:flex;flex-wrap:wrap;gap:6px;margin-top:8px}
-.resume{display:flex;gap:14px;align-items:center;justify-content:center;flex-wrap:wrap;background:var(--accent-soft);border-radius:14px;padding:12px 16px;margin:0 auto 24px;max-width:820px;font-size:14.5px}
+.resume{display:flex;gap:14px;align-items:center;justify-content:center;flex-wrap:wrap;background:var(--accent-soft);border-radius:14px;padding:12px 16px;margin:0 auto 24px;max-width:820px;font-size:14px}
 .preview{display:grid;gap:14px}
 .preview .row3{display:grid;grid-template-columns:repeat(3,1fr);gap:12px}
 .preview .row3 div{border-top:1px solid var(--line);padding-top:10px}
 .preview .row3 b{display:block;font-family:var(--font-display);font-weight:600;font-size:24px;letter-spacing:-.02em;line-height:1;color:var(--accent)}
-.warn{background:#F5DDD6;color:#7A2718;border-radius:12px;padding:10px 14px;font-size:13.5px;margin-top:10px}
+.warn{background:#F5DDD6;color:#7A2718;border-radius:12px;padding:10px 14px;font-size:13px;margin-top:10px}
 
 .chip.opt{display:inline-flex;align-items:center;gap:6px}
 .chip.opt::before{content:"";width:12px;height:12px;border-radius:4px;border:1.5px solid var(--line)}
@@ -260,7 +260,7 @@ footer{border-top:1px solid var(--line);padding:30px 0 40px;font-size:13.5px;col
 .chip.opt[aria-pressed="true"]::before{background:var(--paper);border-color:var(--paper);box-shadow:inset 0 0 0 2px var(--accent)}
 .chip.own{border-style:dashed}
 .chip.idk{color:var(--muted)}
-.quick-hint{padding:0 20px 8px;font-size:12.5px;color:var(--muted)}
+.quick-hint{padding:0 20px 8px;font-size:13px;color:var(--muted)}
 .composer textarea.big{min-height:150px}
 .composer .col{display:flex;flex-direction:column;gap:6px;flex:0 0 auto}
 
@@ -287,12 +287,12 @@ footer{border-top:1px solid var(--line);padding:30px 0 40px;font-size:13.5px;col
 .canvas .cv:nth-child(6),.canvas .cv:nth-child(7){grid-column:span 2}
 .canvas .cv:nth-child(6){grid-column:1 / span 3}.canvas .cv:nth-child(7){grid-column:4 / span 2}
 @media (max-width:900px){.canvas{grid-template-columns:1fr 1fr}.canvas .cv:nth-child(6),.canvas .cv:nth-child(7){grid-column:span 2}}
-.bignum.sm{font-size:30px}
+.bignum.sm{font-size:32px}
 .sdg{display:grid;grid-template-columns:42px 1fr;gap:12px;align-items:center}
 .sdg>span{width:42px;height:42px;border-radius:10px;background:var(--accent);color:var(--accent-ink);display:grid;place-items:center;font-family:var(--font-display);font-weight:600}
 .passport{border:1.5px solid var(--accent);border-radius:16px;padding:20px;background:linear-gradient(180deg,var(--accent-soft),var(--surface) 40%)}
 .matrix-wrap{display:grid;grid-template-columns:22px 1fr;gap:6px;margin-top:10px}
-.axis-y{writing-mode:vertical-rl;transform:rotate(180deg);font-size:11.5px;color:var(--muted);text-align:center}
+.axis-y{writing-mode:vertical-rl;transform:rotate(180deg);font-size:12px;color:var(--muted);text-align:center}
 .matrix{display:grid;grid-template-columns:repeat(3,1fr);gap:4px;aspect-ratio:3/2}
 .matrix .cell{border-radius:8px;display:flex;flex-wrap:wrap;gap:4px;align-items:center;justify-content:center;padding:4px}
 .matrix .cell.s1{background:#EAF5D6}.matrix .cell.s2{background:#FBF0CF}.matrix .cell.s3{background:#FADAD2}
@@ -314,7 +314,7 @@ html{color-scheme:light}
 .tipbox{background:var(--sunk);border-radius:12px;padding:12px 14px;font-size:14px;margin-top:10px}
 .fb-sec{padding:22px 0;border-bottom:1px solid var(--line)}
 .fb-sec:last-of-type{border-bottom:0}
-.susnote{font-size:12.5px;color:var(--muted)}
+.susnote{font-size:13px;color:var(--muted)}
 .result-box{background:var(--accent-soft);border-radius:14px;padding:18px;margin-top:16px}
 .case-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:20px}
 @media (max-width:960px){.case-grid{grid-template-columns:repeat(2,minmax(0,1fr))}}
@@ -324,13 +324,66 @@ html{color-scheme:light}
 .navlinks{gap:2px}.navlinks a{padding:8px 9px;font-size:14px;white-space:nowrap}.topbar .btn.cta{white-space:nowrap}
 
 /* v5.5: larger interview, multi-select target chips */
-.chat{height:min(900px,88vh)}
+.chat{height:auto;min-height:0}
+.chat .msgs{flex:none;height:clamp(320px,52vh,600px)}
+.chat .quick{max-height:190px;overflow-y:auto;padding-top:12px;border-top:1px solid var(--line)}
 .msgs{position:relative}
 .msg{font-size:16px;line-height:1.55}
-.msg.ai.current{font-size:18px;line-height:1.55;background:#fff;border:1.5px solid var(--accent);box-shadow:0 6px 22px rgba(47,91,255,.10);max-width:92%}
+.msg.ai.current{font-size:18px;line-height:1.6;background:#fff;border:1.5px solid var(--accent);box-shadow:0 6px 22px rgba(47,91,255,.10);max-width:96%}
 .qhead{font-size:14px;font-weight:600}
 .chips.multi .chip.on{background:var(--accent);color:var(--accent-ink);border-color:var(--accent)}
-@media (max-width:700px){.msg.ai.current{font-size:17px}.chat{height:auto;min-height:80vh}}
+@media (max-width:700px){.msg.ai.current{font-size:18px}.chat{height:auto;min-height:0}.chat .msgs{height:clamp(280px,55vh,520px)}.chat .quick{max-height:220px}}
+
+/* ===== v5.9: feedback round 2 ===== */
+:root{--fs-xs:12px;--fs-sm:13px;--fs-md:14px;--fs-body:16px;--fs-lead:20px}
+.navlinks{align-items:center}
+.navmore{position:relative}
+.navmore>summary{list-style:none;cursor:pointer;display:inline-flex;align-items:center;gap:4px;font-size:14px;color:var(--muted);padding:8px 9px;border-radius:8px;white-space:nowrap}
+.navmore>summary::-webkit-details-marker{display:none}
+.navmore>summary:hover,.navmore[open]>summary{color:var(--ink)}
+.navmore:has(a.on)>summary{color:var(--ink);background:var(--sunk)}
+.navmore .chev{width:15px;height:15px;transition:transform .15s}.navmore[open] .chev{transform:rotate(180deg)}
+.navdrop{position:absolute;right:0;top:calc(100% + 8px);min-width:210px;background:var(--surface);border:1px solid var(--line);border-radius:12px;box-shadow:0 14px 40px rgba(11,27,51,.12);padding:6px;display:flex;flex-direction:column;z-index:20}
+.navdrop a{border-radius:8px;padding:9px 10px}
+@media (max-width:860px){.navmore>summary{padding:8px 11px}.navdrop{position:static;box-shadow:none;border:0;padding:0 0 0 14px;min-width:0}}
+.hero-sketch{display:block;width:100%;height:200px;object-fit:contain;background:var(--sunk);border-radius:12px}
+.feat-grid{gap:20px}
+.feat{border:1px solid var(--line);border-radius:16px;padding:24px;background:var(--surface)}
+.feat h3{margin:16px 0 6px}
+.faq-wrap{display:grid;grid-template-columns:minmax(0,.8fr) minmax(0,1.2fr);gap:48px;align-items:start}
+@media (max-width:800px){.faq-wrap{grid-template-columns:1fr;gap:24px}}
+.faq details{border-bottom:1px solid var(--line);padding:4px 0}
+.faq details:first-child{border-top:1px solid var(--line)}
+.faq summary{cursor:pointer;list-style:none;font-weight:600;padding:16px 32px 16px 0;position:relative}
+.faq summary::-webkit-details-marker{display:none}
+.faq summary::after{content:"+";position:absolute;right:4px;top:12px;font-size:24px;font-weight:400;color:var(--accent)}
+.faq details[open] summary::after{content:"−"}
+.faq details p{margin:0 0 18px;max-width:62ch}
+.cta-band{background:var(--accent-soft)}
+footer{padding:48px 0 28px;font-size:14px}
+.foot-grid{display:grid;grid-template-columns:1.6fr 1fr 1fr 1fr;gap:32px}
+.foot-grid .label{margin-bottom:12px}
+.foot-grid a:not(.brand){display:block;color:var(--muted);text-decoration:none;padding:4px 0}
+.foot-grid a:not(.brand):hover{color:var(--accent)}
+.foot-bottom{display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap;margin-top:36px;padding-top:20px;border-top:1px solid var(--line);font-size:13px;color:var(--muted)}
+@media (max-width:800px){.foot-grid{grid-template-columns:1fr 1fr}}
+.bsec{border:0;margin:0;padding:0 0 28px;min-width:0}
+.bsec+.bsec{border-top:1px solid var(--line);padding-top:26px}
+.bsec legend{display:flex;align-items:baseline;gap:10px;font-family:var(--font-display);font-weight:600;font-size:20px;letter-spacing:-.01em;padding:0;margin-bottom:18px;float:left;width:100%}
+.bsec legend+*{clear:both}
+.bsec legend small{font-family:var(--font-body);font-weight:400;font-size:13px;color:var(--muted)}
+.bnum{display:inline-grid;place-items:center;width:26px;height:26px;border-radius:50%;background:var(--accent-soft);color:var(--accent);font-size:13px;font-family:var(--font-body);font-weight:700;align-self:center}
+span.f{display:block;font-weight:600;font-size:14px;margin-bottom:8px}
+.an-tabs{gap:6px;padding:12px 0}
+.an-tabs button{display:inline-flex;align-items:center;gap:8px;font-size:14px;padding:8px 14px;border-radius:999px}
+.an-tabs button .tn{display:inline-grid;place-items:center;width:20px;height:20px;border-radius:50%;background:var(--sunk);font-size:12px;font-weight:700}
+.an-tabs button.on{background:var(--accent);border-color:var(--accent);color:#fff}
+.an-tabs button.on .tn{background:rgba(255,255,255,.25);color:#fff}
+.an-tabs .an-all{margin-left:auto;background:transparent;border-style:dashed}
+.an-off{display:none!important}
+.an-pager{display:flex;align-items:center;justify-content:space-between;gap:12px;flex-wrap:wrap;margin-top:28px;padding-top:22px;border-top:1px solid var(--line)}
+.chat .quick:empty{display:none}
+@media (max-width:860px){.navlinks{align-items:flex-start}}
 
 </style>
 </head>
@@ -344,11 +397,7 @@ html{color-scheme:light}
       <a href="#tool" data-nav="tool"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M4 20l4-1 11-11-3-3L5 16l-1 4z"/><path d="M14 6l3 3"/></svg>Tool</a>
       <a href="#cases" data-nav="cases"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="7" width="18" height="13" rx="2"/><path d="M8 7V5a1 1 0 011-1h6a1 1 0 011 1v2"/><path d="M3 13h18"/></svg>Cases</a>
       <a href="#howto" data-nav="howto"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M9.5 9.5a2.5 2.5 0 115 0c0 1.7-2.5 1.8-2.5 3.5"/><path d="M12 16.5h.01"/></svg>How to use</a>
-      <a href="#research" data-nav="research"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><circle cx="11" cy="11" r="6"/><path d="M20 20l-4.5-4.5"/></svg>Research</a>
-      <a href="#method" data-nav="method"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M4 19V11M10 19V5M16 19v-6M3 19h18"/></svg>Method</a>
-      <a href="#guide" data-nav="guide"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M5 4h11a3 3 0 013 3v13H8a3 3 0 01-3-3z"/><path d="M5 17a3 3 0 013-3h11"/></svg>Guide</a>
-      <a href="#about" data-nav="about"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M12 11v5M12 8h.01"/></svg>About</a>
-      <a href="#feedback" data-nav="feedback"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M4 5h16v11H9l-5 4z"/><path d="M8 9h8M8 12h5"/></svg>Feedback</a>
+      <details class="navmore" id="navMore"><summary>More<svg class="ico chev" viewBox="0 0 24 24" aria-hidden="true"><path d="M6 9l6 6 6-6"/></svg></summary><div class="navdrop" role="menu"><a role="menuitem" href="#research" data-nav="research"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><circle cx="11" cy="11" r="6"/><path d="M20 20l-4.5-4.5"/></svg>Research</a><a role="menuitem" href="#method" data-nav="method"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M4 19V11M10 19V5M16 19v-6M3 19h18"/></svg>Method</a><a role="menuitem" href="#guide" data-nav="guide"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M5 4h11a3 3 0 013 3v13H8a3 3 0 01-3-3z"/><path d="M5 17a3 3 0 013-3h11"/></svg>Guide</a><a role="menuitem" href="#about" data-nav="about"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M12 11v5M12 8h.01"/></svg>About</a><a role="menuitem" href="#feedback" data-nav="feedback"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M4 5h16v11H9l-5 4z"/><path d="M8 9h8M8 12h5"/></svg>Feedback</a></div></details>
     </nav>
     <a class="btn sm primary cta" href="#tool">Start designing</a>
   </div>
@@ -362,8 +411,8 @@ html{color-scheme:light}
       <div>
         <div class="label acc">RoopLab · the form lab for circular products</div>
         <h1 style="margin-top:18px">Make products that stay <em>new</em> for longer.</h1>
-        <p class="lead">RoopLab interviews you with 22 expert questions, then builds a full report: materials with carbon footprint and lifespan, a circularity score, the rules and standards for your country, where to find suppliers, and what to do next.</p>
-        <div class="row"><a class="btn primary" href="#tool">Start with your idea</a><button class="btn" type="button" data-demo="chair">Watch a demo</button></div>
+        <p class="lead">Answer 22 guided questions about your product idea. RoopLab turns your answers into a circular design report you can act on.</p>
+        <div class="row"><a class="btn primary" href="#tool">Start designing</a><button class="btn" type="button" data-demo="chair">Play example</button></div>
       </div>
       <div class="card preview" id="heroPreview" aria-label="Example report summary"></div>
     </div>
@@ -376,7 +425,7 @@ html{color-scheme:light}
   </div>
   <section class="block" style="background:var(--surface)">
     <div class="wrap head">
-      <div><div class="label">Why early</div><h2 style="margin-top:12px">The biggest sustainability choices happen <em>before</em> anything is made.</h2></div>
+      <div><div class="label acc">Why early</div><h2 style="margin-top:12px">The biggest sustainability choices happen <em>before</em> anything is made.</h2></div>
       <div><p class="muted">Materials, joints, repair access, the country of production and end of life are fixed in the first weeks of a project. Beginners rarely know which questions to ask or which rules apply. RoopLab asks them in plain language and turns the answers into evidence you can act on.</p></div>
     </div>
     <div class="wrap grid g4">
@@ -388,15 +437,30 @@ html{color-scheme:light}
   </section>
   <section class="block">
     <div class="wrap">
+      <div class="head"><div><div class="label acc">Your report</div><h2 style="margin-top:12px">Everything you need for the first design decisions.</h2></div><div><p class="muted">After the interview you get one analysis page and a report you can download as a PDF. Each section says where its numbers come from and how certain they are.</p></div></div>
+      <div class="grid g3 feat-grid"><div class="feat"><div class="icon-tile"><svg class="ico lg" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3l8 4.5v9L12 21l-8-4.5v-9z"/><path d="M12 12l8-4.5M12 12v9M12 12L4 7.5"/></svg></div><h3>Material choices</h3><p class="small muted">2 to 4 materials per part, with recycled content, lifespan and how each one ends its life.</p></div><div class="feat"><div class="icon-tile"><svg class="ico lg" viewBox="0 0 24 24" aria-hidden="true"><path d="M4 19V11M10 19V5M16 19v-6M3 19h18"/></svg></div><h3>Carbon range</h3><p class="small muted">A material carbon footprint as a low to high range, and tips to bring it down.</p></div><div class="feat"><div class="icon-tile"><svg class="ico lg" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="8"/><path d="M12 4a8 8 0 018 8"/></svg></div><h3>Circularity score</h3><p class="small muted">A simplified circularity indicator and 11 design criteria shown on a radar chart.</p></div><div class="feat"><div class="icon-tile"><svg class="ico lg" viewBox="0 0 24 24" aria-hidden="true"><path d="M7 3h7l5 5v13H7z"/><path d="M14 3v5h5M10 13h6M10 17h6"/></svg></div><h3>Rules for your market</h3><p class="small muted">The laws, standards and labels to check where you sell, marked mandatory or voluntary.</p></div><div class="feat"><div class="icon-tile"><svg class="ico lg" viewBox="0 0 24 24" aria-hidden="true"><path d="M3 21V9l9-6 9 6v12"/><path d="M9 21v-6h6v6"/></svg></div><h3>Where to make it</h3><p class="small muted">Supplier directories and manufacturing regions, or the best places worldwide if you are not sure.</p></div><div class="feat"><div class="icon-tile"><svg class="ico lg" viewBox="0 0 24 24" aria-hidden="true"><path d="M4 17l5-5 4 4 7-7"/><path d="M15 9h5v5"/></svg></div><h3>Concepts and roadmap</h3><p class="small muted">Three design directions to compare, a risk matrix and clear next steps.</p></div></div>
+    </div>
+  </section>
+  <section class="block">
+    <div class="wrap">
       <div class="row between" style="margin-bottom:28px"><h2>See it in action</h2><a class="btn sm" href="#cases">All case studies</a></div>
       <div class="grid g2" id="homeCases"></div>
     </div>
   </section>
   <section class="block" style="background:var(--surface)">
     <div class="wrap head" style="margin-bottom:0">
-      <div><div class="label">Who it is for</div><h2 style="margin-top:12px">Students, fresh graduates and anyone with a product idea.</h2></div>
+      <div><div class="label acc">Who it is for</div><h2 style="margin-top:12px">Students, fresh graduates and anyone with a product idea.</h2></div>
       <div><p class="muted">RoopLab is a Master's thesis prototype. It supports early thinking and decisions. Carbon values are indicative ranges, rules must be confirmed for your exact product, and nothing replaces testing, expert review or a full life cycle assessment.</p><div class="row" style="margin-top:20px"><a class="btn sm" href="#howto">How to use</a><a class="btn sm" href="#research">See the research</a><a class="btn sm ghost" href="#about">About the project</a></div></div>
     </div>
+  </section>
+  <section class="block">
+    <div class="wrap faq-wrap">
+      <div><div class="label acc">Questions</div><h2 style="margin-top:12px">Before you start</h2><p class="muted" style="margin-top:14px">Still unsure? Play an example first. It runs through all 22 questions in about 40 seconds.</p><div class="row" style="margin-top:20px"><button class="btn" type="button" data-demo="ring">Play example</button></div></div>
+      <div class="faq"><details><summary>Do I need design or engineering knowledge?</summary><p class="muted">No. The questions use plain language. If you do not know an answer, tap "I don't know" and RoopLab explains the options.</p></details><details><summary>How accurate are the results?</summary><p class="muted">They are early estimates for decisions, not certified figures. Carbon values are ranges from public data, and rules must be confirmed for your exact product.</p></details><details><summary>Which countries are covered?</summary><p class="muted">Detailed rules for the EU (including Germany), India, the UK and the USA. For other countries RoopLab gives basic guidance and international standards.</p></details><details><summary>What happens to my answers?</summary><p class="muted">Your progress is saved in your own browser. In AI mode your answers are sent to the AI model to write the questions and the analysis. The feedback form is only sent if you submit it.</p></details><details><summary>Can I stop and continue later?</summary><p class="muted">Yes. Close the page and open the Tool again in the same browser, then press Continue.</p></details></div>
+    </div>
+  </section>
+  <section class="block cta-band">
+    <div class="wrap" style="text-align:center"><h2>Have a product idea?</h2><p class="muted" style="margin:12px auto 26px;max-width:46ch">Describe it in one sentence and get your first circular design report.</p><a class="btn primary" href="#tool">Start designing</a></div>
   </section>
 </div>
 
@@ -413,12 +477,12 @@ html{color-scheme:light}
       <div class="ideabox">
         <div class="resume" id="resumeBox" hidden><span id="resumeTxt"></span><button class="btn sm acc" type="button" id="resumeBtn">Continue</button><button class="btn sm ghost" type="button" id="resumeDrop">Discard</button></div>
         <div class="label acc">Step 1 · Your idea</div>
-        <h2 style="margin-top:12px">What would you like to create?</h2>
+        <h2 style="margin-top:12px">What is your idea?</h2>
         <label class="sr" for="ideaText">Describe your product idea</label>
-        <textarea id="ideaText" placeholder="e.g. A study chair for students who move flat often"></textarea>
+        <textarea id="ideaText" placeholder="Write your idea in your own words…"></textarea>
+        <p class="tiny muted" style="margin-top:8px">Say what the product is and who it is for. One or two sentences are enough.</p>
         <div class="err" id="e-idea"></div>
-        <div class="examples"><button type="button" class="chip" data-ex="A study chair for students who move flat often">Study chair</button><button type="button" class="chip" data-ex="A modular silver ring with a swappable stone for young professionals">Silver ring</button><button type="button" class="chip" data-ex="A durable wooden toy car for children aged 3 to 6">Wooden toy</button><button type="button" class="chip" data-ex="A desk lamp made from recycled aluminium with a replaceable LED">Desk lamp</button></div>
-        <div class="row" style="justify-content:center;margin-top:30px"><button class="btn primary" type="button" id="ideaGo">Continue</button><button class="btn ghost" type="button" id="ideaSkip">Fill the brief myself</button></div>
+                <div class="row" style="justify-content:center;margin-top:30px"><button class="btn primary" type="button" id="ideaGo">Continue</button><button class="btn ghost" type="button" id="ideaSkip">Fill the brief myself</button></div>
         <p class="tiny muted" style="margin-top:14px">Or play a finished example: <button class="btn sm ghost" type="button" data-demo="chair">Study chair</button><button class="btn sm ghost" type="button" data-demo="ring">Silver ring</button></p>
       </div>
     </div>
@@ -426,28 +490,15 @@ html{color-scheme:light}
     <div class="stage" id="s-brief">
       <div class="row between" style="margin-bottom:22px"><div><div class="label acc">Step 2 · Brief</div><h2 style="margin-top:8px">Check your product brief</h2></div><span class="small muted" id="briefHint">Fields marked * are needed. A best guess is fine.</span></div>
       <form id="briefForm" class="card" novalidate>
-        <div class="grid g2">
-          <div><label class="f" for="b-name">Product name *</label><input type="text" id="b-name" placeholder="e.g. Kairo study chair"><div class="err" id="e-name"></div></div>
-          <div><label class="f" for="b-cat">Category *</label><select id="b-cat"><option value="">Choose a category</option><option>Furniture</option><option>Jewellery and accessories</option><option>Toy</option><option>Electronics</option><option>Phone and tech accessories</option><option>Lighting</option><option>Kitchen and home</option><option>Bag and textile</option><option>Packaging</option><option>Sports and outdoor</option><option>Other</option></select><input type="text" id="b-catother" placeholder="Type your category, e.g. Musical instrument" hidden style="margin-top:8px"><div class="err" id="e-cat"></div></div>
-          <div><label class="f" for="b-sub">Sub-category *</label><input type="text" id="b-sub" placeholder="Type freely: study chair, stacking ring, toy car"><div class="err" id="e-sub"></div></div>
-          <div><label class="f" for="b-target">Target group *</label><input type="text" id="b-target" placeholder="Who will use it? Tap one or more groups"><div class="chips multi" data-for="b-target"><button type="button" class="chip">University students</button><button type="button" class="chip">Young professionals</button><button type="button" class="chip">Children 3 to 6</button><button type="button" class="chip">Families</button><button type="button" class="chip">Elderly people</button><button type="button" class="chip">Small businesses</button></div><div class="err" id="e-target"></div></div>
-          <div><label class="f" for="b-sold">Main market (sold in) *</label><select id="b-sold"><option value="">Choose a country</option></select><div class="hint">Used for rules, standards and labels.</div><div class="err" id="e-sold"></div></div>
-          <div><label class="f" for="b-made">Made in</label><select id="b-made"><option>Not sure</option></select><div class="hint">Used for supplier suggestions.</div></div>
-          <div><label class="f" for="b-min">Budget (retail price per product)</label><div class="row" style="flex-wrap:nowrap"><select id="b-cur" style="width:86px" aria-label="Currency"><option>€</option><option>₹</option><option>$</option><option>£</option></select><input type="number" id="b-min" placeholder="Min" min="0" aria-label="Minimum price"><input type="number" id="b-max" placeholder="Max" min="0" aria-label="Maximum price"></div><div class="err" id="e-budget"></div></div>
-          <div class="grid g2" style="gap:14px"><div><label class="f" for="b-life">Target lifetime</label><select id="b-life"><option value="">Not sure</option><option>1 to 2 years</option><option>3 to 5 years</option><option>5 to 10 years</option><option>More than 10 years</option></select></div><div><label class="f" for="b-weight">Weight guess (kg)</label><input type="number" id="b-weight" min="0" step="0.001" placeholder="optional"></div></div>
-        </div>
-        <div style="margin-top:20px"><span style="display:block;font-weight:600;font-size:14px;margin-bottom:8px">Quality level *</span>
+        <fieldset class="bsec"><legend><span class="bnum">1</span>About the product<small>What it is and who it is for</small></legend><div class="grid g2"><div><label class="f" for="b-name">Product name *</label><input type="text" id="b-name" placeholder="e.g. Kairo study chair"><div class="err" id="e-name"></div></div><div><label class="f" for="b-cat">Category *</label><select id="b-cat"><option value="">Choose a category</option><option>Furniture</option><option>Jewellery and accessories</option><option>Toy</option><option>Electronics</option><option>Phone and tech accessories</option><option>Lighting</option><option>Kitchen and home</option><option>Bag and textile</option><option>Packaging</option><option>Sports and outdoor</option><option>Other</option></select><input type="text" id="b-catother" placeholder="Type your category, e.g. Musical instrument" hidden style="margin-top:8px"><div class="err" id="e-cat"></div></div><div><label class="f" for="b-sub">Sub-category *</label><input type="text" id="b-sub" list="subList" autocomplete="off" placeholder="Pick a suggestion or type your own"><datalist id="subList"></datalist><div class="err" id="e-sub"></div></div><div><label class="f" for="b-target">Target group *</label><input type="text" id="b-target" placeholder="Who will use it? Tap one or more groups"><div class="chips multi" data-for="b-target"><button type="button" class="chip">University students</button><button type="button" class="chip">Young professionals</button><button type="button" class="chip">Children 3 to 6</button><button type="button" class="chip">Families</button><button type="button" class="chip">Elderly people</button><button type="button" class="chip">Small businesses</button></div><div class="err" id="e-target"></div></div></div><div style="margin-top:18px"><div><label class="f" for="b-idea">Idea in a few sentences</label><textarea class="in" id="b-idea"></textarea></div></div></fieldset>
+        <fieldset class="bsec"><legend><span class="bnum">2</span>Market and making<small>Where it is sold and made</small></legend><div class="grid g2"><div><label class="f" for="b-sold">Main market (sold in) *</label><select id="b-sold"><option value="">Choose a country</option></select><div class="hint">Used for rules, standards and labels.</div><div class="err" id="e-sold"></div></div><div><label class="f" for="b-made">Made in</label><select id="b-made"><option>Not sure yet</option></select><div class="hint">Not decided? Choose "Find the best place worldwide for me" and RoopLab suggests regions.</div></div><div><label class="f" for="b-min">Budget (retail price per product)</label><div class="row" style="flex-wrap:nowrap"><select id="b-cur" style="width:86px" aria-label="Currency"><option>€</option><option>₹</option><option>$</option><option>£</option></select><input type="number" id="b-min" placeholder="Min" min="0" aria-label="Minimum price"><input type="number" id="b-max" placeholder="Max" min="0" aria-label="Maximum price"></div><div class="err" id="e-budget"></div></div><div class="grid g2" style="gap:14px"><div><label class="f" for="b-life">Target lifetime</label><select id="b-life"><option value="">Not sure</option><option>1 to 2 years</option><option>3 to 5 years</option><option>5 to 10 years</option><option>More than 10 years</option></select></div><div><label class="f" for="b-weight">Weight guess (kg)</label><input type="number" id="b-weight" min="0" step="0.001" placeholder="optional"></div></div></div></fieldset>
+        <fieldset class="bsec"><legend><span class="bnum">3</span>Quality and goals<small>What matters most</small></legend><div><span class="f">Quality level *</span>
           <div class="tiers" role="radiogroup" aria-label="Quality level">
             <label class="tier"><input type="radio" name="tier" value="Low cost"><strong>Low cost</strong><span>Affordable, simple, large numbers</span></label>
             <label class="tier"><input type="radio" name="tier" value="Medium"><strong>Medium</strong><span>Good value, durable everyday use</span></label>
             <label class="tier"><input type="radio" name="tier" value="Luxury"><strong>Luxury</strong><span>Premium materials, craft and finish</span></label>
-          </div><div class="err" id="e-tier"></div></div>
-        <div class="grid g2" style="margin-top:20px">
-          <div><label class="f" for="b-idea">Idea in a few sentences</label><textarea class="in" id="b-idea"></textarea></div>
-          <div><label class="f" for="b-prio">Most important circular goal</label><select id="b-prio"><option>Repair and longer life</option><option>Lower material impact</option><option>Recycling and material recovery</option><option>Reuse and refurbishment</option><option>Not sure yet</option></select>
-            <label class="f" for="b-img" style="margin-top:16px">Sketch or image (optional)</label>
-            <div class="drop"><img id="b-imgprev" alt="" hidden><div><input type="file" id="b-img" accept="image/png,image/jpeg,image/webp,image/gif"><div class="hint">The AI comments on shape, joints and materials.</div><div class="err" id="e-img"></div></div></div></div>
-        </div>
+          </div><div class="err" id="e-tier"></div></div><div class="grid g2" style="margin-top:18px"><div><label class="f" for="b-prio">Most important circular goal</label><select id="b-prio"><option>Repair and longer life</option><option>Lower material impact</option><option>Recycling and material recovery</option><option>Reuse and refurbishment</option><option>Not sure yet</option></select></div><div><label class="f" for="b-img">Sketch or image (optional)</label>
+            <div class="drop"><img id="b-imgprev" alt="" hidden><div><input type="file" id="b-img" accept="image/png,image/jpeg,image/webp,image/gif"><div class="hint">The AI comments on shape, joints and materials.</div><div class="err" id="e-img"></div></div></div></div></div></fieldset>
         <div class="row between" style="margin-top:24px"><button class="btn ghost" type="button" data-stage="idea">Back</button><button class="btn primary" type="submit">Start the interview</button></div>
       </form>
     </div>
@@ -478,8 +529,9 @@ html{color-scheme:light}
     </div>
 
     <div class="stage" id="s-analysis">
-      <div id="anLoading" class="loading" hidden><div class="spin"></div><h2 style="font-size:30px">Building your in-depth analysis…</h2><p class="muted small">Materials and carbon, circularity, lifespan, rules and standards for your market, suppliers, concepts and 11 criteria. This can take up to two minutes.</p></div>
+      <div id="anLoading" class="loading" hidden><div class="spin"></div><h2>Building your in-depth analysis…</h2><p class="muted small">Materials and carbon, circularity, lifespan, rules and standards for your market, suppliers, concepts and 11 criteria. This can take up to two minutes.</p></div>
       <div id="anBody"></div>
+      <div id="anPager" class="an-pager" hidden></div>
     </div>
 
     <div class="stage" id="s-report">
@@ -498,7 +550,7 @@ html{color-scheme:light}
   <section class="block"><div class="wrap">
     <div class="head"><div><div class="label acc">Case studies</div><h2 style="margin-top:12px">Five products, start to finish.</h2></div><p class="muted">Each case plays a full 22-question interview with a sketch, then shows the in-depth analysis and report. They cover different categories, markets and quality levels. All are illustrative examples written for demonstration, not tested products.</p></div>
     <div class="case-grid" id="caseCards"></div>
-    <div class="card" style="margin-top:28px"><h3>How to present a case</h3><ol class="lst small"><li>Press <strong>Play this case</strong>. The interview runs by itself; press <strong>Skip to analysis</strong> to jump ahead.</li><li>Press <strong>Create my analysis</strong> and use the section menu to show materials, carbon, circularity, rules and the passport.</li><li>Open <strong>Report</strong> and download the PDF to show the full document.</li></ol></div>
+    <div class="card" style="margin-top:28px"><h3>How to present a case</h3><ol class="lst small"><li>Press <strong>Play example</strong>. The interview runs by itself; press <strong>Skip to analysis</strong> to jump ahead.</li><li>Press <strong>Create my analysis</strong> and use the section menu to show materials, carbon, circularity, rules and the passport.</li><li>Open <strong>Report</strong> and download the PDF to show the full document.</li></ol></div>
   </div></section>
 </div>
 
@@ -583,7 +635,7 @@ html{color-scheme:light}
   <section class="block"><div class="wrap narrow">
     <div class="label acc">How to use</div><h2 style="margin:12px 0 10px">Use RoopLab in 15 minutes</h2>
     <p class="muted" style="margin-bottom:10px">You need no design experience. Have a product idea in mind and, if you like, a photo of a sketch.</p>
-    <div class="howto-step"><span class="num">1</span><div><h3>Describe your idea in one sentence</h3><p class="muted small" style="margin-top:4px">Open the Tool and write what you want to make and for whom, for example "A study chair for students who move flat often". Or tap an example.</p><div class="tipbox">Tip: mention the user and one special feature. It gives better questions later.</div></div></div>
+    <div class="howto-step"><span class="num">1</span><div><h3>Describe your idea in one sentence</h3><p class="muted small" style="margin-top:4px">Open the Tool and write what you want to make and for whom, for example "A study chair for students who move flat often".</p><div class="tipbox">Tip: mention the user and one special feature. It gives better questions later.</div></div></div>
     <div class="howto-step"><span class="num">2</span><div><h3>Check the brief</h3><p class="muted small" style="margin-top:4px">RoopLab fills in a brief. Check the name, category, sub-category, target group and quality level. Choose where it will be sold: this decides which rules and standards appear. Add a budget and a sketch if you have them.</p><div class="tipbox">Tip: the market matters most. A toy sold in the EU and one sold in India follow different laws.</div></div></div>
     <div class="howto-step"><span class="num">3</span><div><h3>Answer the 22-question interview</h3><p class="muted small" style="margin-top:4px">Questions come one at a time in six sections. Tap one or more options, add your own words, or press "Write in detail" for a longer answer. Not sure? Tap "I don't know" and RoopLab explains the choices.</p><div class="tipbox">Tip: your progress is saved in this browser. If you close the page, open the Tool again and press Continue.</div></div></div>
     <div class="howto-step"><span class="num">4</span><div><h3>Create and read the analysis</h3><p class="muted small" style="margin-top:4px">After at least 8 answers, press "Create my analysis". Use the section menu to move between materials, carbon, circularity, circular strategies, comparison, rules, business, concepts, the 11 criteria, the product passport and the roadmap.</p><div class="tipbox">Tip: change any criteria rating you disagree with, and add your reasons in the decision log. It all goes into the report.</div></div></div>
@@ -636,11 +688,24 @@ html{color-scheme:light}
 </div>
 </main>
 
-<footer><div class="wrap row between"><span>RoopLab · Master's thesis prototype, Design Leadership · 2026</span><span>Indicative estimates. Confirm rules, materials and emissions before decisions.</span></div></footer>
+<footer>
+  <div class="wrap foot-grid">
+    <div><a class="brand" href="#home">RoopLab</a><p class="small muted" style="margin-top:10px;max-width:34ch">A digital decision-support tool for circular product design in early development stages.</p></div>
+    <div><div class="label">Use</div><a href="#tool">Tool</a><a href="#cases">Cases</a><a href="#howto">How to use</a></div>
+    <div><div class="label">Learn</div><a href="#research">Research</a><a href="#method">Method</a><a href="#guide">Guide</a></div>
+    <div><div class="label">Project</div><a href="#about">About</a><a href="#feedback">Give feedback</a></div>
+  </div>
+  <div class="wrap foot-bottom"><span>© 2026 Abhijeet Kumar · Master's thesis prototype, M.Sc. Design Leadership</span><span>Indicative estimates. Confirm rules, materials and emissions before decisions.</span></div>
+</footer>
 <div class="toast" id="toast" role="status"></div>
 
 <script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.10.1/html2pdf.bundle.min.js"></script>
 <script>
+const MADE_UNSURE="Not sure yet",MADE_BEST="Find the best place worldwide for me";
+function madeKnown(m){return!!m&&m!=="Not sure"&&m!==MADE_UNSURE&&m!==MADE_BEST}
+function madePlace(b){return madeKnown(b.made)?b.made:b.sold}
+function madeLabel(b){return madeKnown(b.made)?b.made:b.made===MADE_BEST?"Not decided (RoopLab suggests the best regions worldwide)":"Not decided yet"}
+const BEST_REGIONS={Furniture:"Poland and the Baltic states (wood furniture for the EU), northern Italy (design furniture), Vietnam and India (solid wood)",Toy:"Erzgebirge in Germany and Channapatna in India (wooden toys), Guangdong in China and Vietnam (plastic and mixed toys)","Jewellery and accessories":"Pforzheim in Germany, Vicenza and Arezzo in Italy, Jaipur in India, Bangkok in Thailand","Bag and textile":"Northern Portugal, Italy (leather), Turkey, Tiruppur in India, Bangladesh","Kitchen and home":"Portugal (ceramics), Poland, Moradabad in India (metalware), China",Lighting:"Poland, Italy, Zhongshan in China (lighting cluster), Moradabad in India (metal)",Electronics:"Czechia, Poland and Hungary (contract electronics in the EU), Shenzhen in China, Vietnam, Noida in India","Phone and tech accessories":"Shenzhen and Dongguan in China, Vietnam, Noida in India; Poland for short runs close to EU markets",Packaging:"Poland and Germany (paper and board), Portugal (cork), India and China",Other:"Look first at the region closest to your market, then at EU contract manufacturers (Poland, Czechia, Portugal) and Asian clusters (China, Vietnam, India)"};
 "use strict";
 /* ============ core data ============ */
 const CRITERIA=["Material circularity","Product longevity / durability","Repairability / maintenance","Disassembly / modularity","Reuse potential","Remanufacturing potential","Recycling / material recovery","Manufacturing / assembly feasibility","User value / experience","Business feasibility / strategic fit","Stakeholder involvement"];
@@ -678,7 +743,7 @@ const Q=[
  {s:2,q:()=>`Are there materials you want to avoid, and why?`,quick:()=>["Glue and foam","Virgin plastic","No preference"]},
  {s:2,q:()=>`How important is recycled or renewable material for you and your buyers, even if it costs a little more?`,quick:()=>["Very important","Important if price is similar","Not important"]},
  {s:2,q:()=>`What surface finish or coating do you want? For example paint, oil, plating, polish or none.`,quick:b=>b.category==="Jewellery and accessories"?["High polish","Matte brushed","Plated"]:["Natural oil","Powder coat","No coating"]},
- {s:3,q:b=>`Where would you like it to be made, and why? You said "${b.made}" in the brief.`,quick:b=>[b.made==="Not sure"?"Close to where I sell":b.made,"Cheapest option","Not sure yet"]},
+ {s:3,q:b=>madeKnown(b.made)?`Where would you like it to be made, and why? You said "${b.made}" in the brief.`:b.made===MADE_BEST?"You asked RoopLab to find the best place to make it. What matters most to you: close to your market, low cost, or special craft skills?":"Where would you like it to be made, and why? It is fine if you have not decided yet.",quick:b=>[madeKnown(b.made)?b.made:"Close to where I sell","Cheapest option","Not sure yet"]},
  {s:3,q:()=>`How many would you make in the first batch?`,quick:()=>["1 to 10 prototypes","50 to 200","500 to 1,000"]},
  {s:3,q:b=>`Do you know how it could be made? For example by hand, CNC cutting, injection moulding, casting, sewing or 3D printing.`,quick:b=>b.category==="Jewellery and accessories"?["Lost-wax casting","Handmade","3D printed wax"]:["CNC and welding","Injection moulding","Not sure"]},
  {s:4,q:()=>`How many years should it last in normal use?`,quick:()=>["3 to 5 years","5 to 10 years","More than 10 years"]},
@@ -704,7 +769,7 @@ const QUICK=[
  ()=>["Glue and foam","Virgin plastic","PVC","Chrome plating","Leather","No preference"],
  ()=>["Very important","Important if price is similar","Only for the main part","Not important"],
  b=>b.category==="Jewellery and accessories"?["High polish","Matte brushed","Oxidised dark","Plated","No finish"]:["Natural oil","Powder coat","Water-based paint","Clear lacquer","No coating"],
- b=>uniq([b.made==="Not sure"?"Close to where I sell":b.made,"India","Germany","Poland","China","Not sure yet"]),
+ b=>uniq([madeKnown(b.made)?b.made:"Close to where I sell",...(b.made===MADE_BEST?["Best place worldwide"]:[]),"India","Germany","Poland","China","Not sure yet"]),
  ()=>["1 to 10 prototypes","50 to 200","500 to 1,000","1,000 to 10,000","More than 10,000"],
  b=>b.category==="Jewellery and accessories"?["Lost-wax casting","Handmade","3D-printed wax","CNC milling","Stamping"]:["CNC cutting","Welding","Injection moulding","Sewing","3D printing","Handmade"],
  ()=>["1 to 2 years","3 to 5 years","5 to 10 years","10 to 20 years","A lifetime"],
@@ -890,7 +955,7 @@ function diamondSVG(){const ph=[["Discover","Literature review · requirement su
 document.querySelectorAll("[data-ex]").forEach(b=>b.addEventListener("click",()=>{$("#ideaText").value=b.dataset.ex;$("#e-idea").textContent=""}));
 $("#ideaText").addEventListener("input",()=>$("#e-idea").textContent="");
 $("#ideaSkip").addEventListener("click",()=>{stopDemo();stage("brief")});
-$("#ideaGo").addEventListener("click",async()=>{stopDemo();const t=$("#ideaText").value.trim();if(t.length<8){$("#e-idea").textContent="Describe your idea in a few words, or tap an example.";return}
+$("#ideaGo").addEventListener("click",async()=>{stopDemo();const t=$("#ideaText").value.trim();if(t.length<8){$("#e-idea").textContent="Describe your idea in a few words.";return}
   const btn=$("#ideaGo");btn.disabled=true;btn.textContent="Reading your idea…";let g=null;
   if(aiOn()){try{g=await aiJSON(`A beginner describes a product idea: "${t}". Suggest a starting product brief. Reply with only JSON: {"name":"short product name with a type word, max 4 words","category":"one of: Furniture, Jewellery and accessories, Toy, Electronics, Phone and tech accessories, Lighting, Kitchen and home, Bag and textile, Packaging, Sports and outdoor, Other","sub":"specific sub-category, 1 to 3 words","target":"target group, max 8 words","tier":"Low cost|Medium|Luxury","min":number or null,"max":number or null,"life":"1 to 2 years|3 to 5 years|5 to 10 years|More than 10 years","priority":"Repair and longer life|Lower material impact|Recycling and material recovery|Reuse and refurbishment","weightKg":number estimate}. Prices are retail in euros.`,{tier:"quick"})}catch(e){g=null}}
   if(!g||typeof g!=="object"||!g.name||!g.category)g=guessBrief(t);fillBrief(g,t);btn.disabled=false;btn.textContent="Continue";$("#briefHint").textContent="Pre-filled from your idea. Check and change anything, especially the market.";stage("brief")});
@@ -899,7 +964,7 @@ function guessBrief(t){const l=t.toLowerCase(),has=w=>w.some(x=>l.includes(x));
   const m=l.match(/\b(phone case|phone cover|mobile case|laptop sleeve|tablet case|study chair|office chair|chair|ring|necklace|earrings?|bracelet|toy car|toy|desk lamp|lamp|table|desk|speaker|backpack|bag|bottle|shelf)\b/),ph=(t.trim().match(/^(?:an?|the|my)?\s*(.+?)(?:\s+(?:for|made|from|that|which|with|to|in)\b|[.,!]|$)/i)||[])[1],sub=m?m[1]:(ph?ph.toLowerCase().split(/\s+/).slice(-2).join(" "):cat.split(" ")[0].toLowerCase()),tm=t.match(/for (.+?)(?: who| that| with|$|\.)/i);
   return{name:sub.replace(/\b\w/g,c=>c.toUpperCase())+" concept",category:cat,sub,target:tm?tm[1]:"",tier:has(["luxury","premium","gold"])?"Luxury":has(["cheap","low-cost","affordable","budget"])?"Low cost":"Medium",priority:has(["recycl"])?"Recycling and material recovery":"Repair and longer life"}}
 function fillBrief(g,idea){const set=(id,v)=>{if(v!=null&&v!=="")$("#"+id).value=v};set("b-name",g.name);
-  if([...$("#b-cat").options].some(o=>o.value===g.category)){$("#b-cat").value=g.category;$("#b-catother").value=""}else if(g.category){$("#b-cat").value="Other";$("#b-catother").value=g.category}toggleCatOther();set("b-sub",g.sub);set("b-target",g.target);set("b-min",g.min);set("b-max",g.max);set("b-weight",g.weightKg);
+  if([...$("#b-cat").options].some(o=>o.value===g.category)){$("#b-cat").value=g.category;$("#b-catother").value=""}else if(g.category){$("#b-cat").value="Other";$("#b-catother").value=g.category}toggleCatOther();if(typeof fillSubs==="function")fillSubs();set("b-sub",g.sub);set("b-target",g.target);set("b-min",g.min);set("b-max",g.max);set("b-weight",g.weightKg);
   if([...$("#b-life").options].some(o=>o.value===g.life))$("#b-life").value=g.life;if([...$("#b-prio").options].some(o=>o.value===g.priority))$("#b-prio").value=g.priority;
   const r=document.querySelector(`input[name=tier][value="${g.tier}"]`);if(r)r.checked=true;$("#b-idea").value=idea||"";syncChips(document.querySelector('.chips[data-for="b-target"]'),$("#b-target"));document.querySelectorAll("#briefForm .err").forEach(e=>e.textContent="")}
 
@@ -911,7 +976,7 @@ $("#b-target").addEventListener("input",()=>syncChips(document.querySelector('.c
 function catLabel(b){return b&&b.category==="Other"&&b.catOther?b.catOther:(b?b.category:"")}
 function toggleCatOther(){const o=$("#b-cat").value==="Other";$("#b-catother").hidden=!o;if(!o)$("#b-catother").value=""}
 $("#b-cat").addEventListener("change",()=>{toggleCatOther();if($("#b-cat").value==="Other")$("#b-catother").focus()});
-(function fillCountries(){const opts=COUNTRIES.map(c=>`<option>${c}</option>`).join("");const s=document.getElementById("b-sold"),m=document.getElementById("b-made"),f=document.getElementById("fb-country");if(s)s.innerHTML=`<option value="">Choose a country</option>`+opts;if(m)m.innerHTML=`<option>Not sure</option>`+opts;if(f)f.innerHTML=`<option value="">Choose</option>`+opts})();
+(function fillCountries(){const opts=COUNTRIES.map(c=>`<option>${c}</option>`).join("");const s=document.getElementById("b-sold"),m=document.getElementById("b-made"),f=document.getElementById("fb-country");if(s)s.innerHTML=`<option value="">Choose a country</option>`+opts;if(m)m.innerHTML=`<option>${MADE_UNSURE}</option><option>${MADE_BEST}</option><option disabled>──────────</option>`+opts;if(f)f.innerHTML=`<option value="">Choose</option>`+opts})();
 document.querySelectorAll("#briefForm input,#briefForm select").forEach(el=>el.addEventListener("input",()=>{const m={"b-name":"e-name","b-cat":"e-cat","b-sub":"e-sub","b-target":"e-target","b-sold":"e-sold","b-min":"e-budget","b-max":"e-budget"}[el.id]||(el.name==="tier"?"e-tier":null);if(m)$("#"+m).textContent=""}));
 $("#b-img").addEventListener("change",e=>{const f=e.target.files[0];$("#e-img").textContent="";if(!f)return;if(!/^image\/(png|jpeg|webp|gif)$/.test(f.type)){$("#e-img").textContent="Choose a PNG, JPG, WebP or GIF image.";e.target.value="";return}setImage(f,()=>{const p=$("#b-imgprev");p.src=S.imageUrl;p.hidden=false})});
 function setImage(f,cb){S.image=f;const rd=new FileReader();rd.onload=()=>{S.imageUrl=rd.result;cb&&cb();if(S.brief)briefKv()};rd.readAsDataURL(f)}
@@ -923,8 +988,8 @@ $("#briefForm").addEventListener("submit",e=>{e.preventDefault();const v=id=>$("
   S.brief={name:v("b-name"),category:v("b-cat"),catOther:v("b-cat")==="Other"?v("b-catother"):"",sub:v("b-sub"),target:v("b-target"),sold:v("b-sold"),made:v("b-made"),cur:v("b-cur"),min:mn,max:mx,life:v("b-life")||"Not sure",weight:v("b-weight"),tier:tier.value,idea:v("b-idea"),priority:v("b-prio")};
   S.log=[];logIt(`Brief set: ${S.brief.tier} ${S.brief.sub} for ${S.brief.target}, sold in ${S.brief.sold}`);startChat()});
 function budgetText(b){if(!b.min&&!b.max)return"Not given";if(b.min&&b.max)return`${b.cur}${b.min} to ${b.cur}${b.max}`;return b.min?`from ${b.cur}${b.min}`:`up to ${b.cur}${b.max}`}
-function briefText(b){return`Product name: ${b.name}\nCategory: ${catLabel(b)}\nSub-category: ${b.sub}\nTarget group: ${b.target}\nMain market (sold in): ${b.sold}\nMade in: ${b.made}\nBudget (retail per product): ${budgetText(b)}\nQuality level: ${b.tier}\nTarget lifetime: ${b.life}\nWeight guess: ${b.weight?b.weight+" kg":"not given"}\nMain circular goal: ${b.priority}\nIdea: ${b.idea||"(not described)"}`}
-function briefKv(){const b=S.brief;if(!b)return;$("#briefKv").innerHTML=[["Product",b.name],["Category",catLabel(b)+" · "+b.sub],["For",b.target],["Sold in",b.sold],["Made in",b.made],["Budget",budgetText(b)],["Quality",b.tier],["Lifetime",b.life]].map(([k,v])=>`<dt>${k}</dt><dd>${esc(v)}</dd>`).join("")+(S.imageUrl?`<dt>Image</dt><dd><img src="${S.imageUrl}" alt="Uploaded design" style="max-width:110px;border-radius:10px;border:1px solid var(--line);background:#fff"></dd>`:"")}
+function briefText(b){return`Product name: ${b.name}\nCategory: ${catLabel(b)}\nSub-category: ${b.sub}\nTarget group: ${b.target}\nMain market (sold in): ${b.sold}\nMade in: ${madeLabel(b)}\nBudget (retail per product): ${budgetText(b)}\nQuality level: ${b.tier}\nTarget lifetime: ${b.life}\nWeight guess: ${b.weight?b.weight+" kg":"not given"}\nMain circular goal: ${b.priority}\nIdea: ${b.idea||"(not described)"}`}
+function briefKv(){const b=S.brief;if(!b)return;$("#briefKv").innerHTML=[["Product",b.name],["Category",catLabel(b)+" · "+b.sub],["For",b.target],["Sold in",b.sold],["Made in",madeLabel(b)],["Budget",budgetText(b)],["Quality",b.tier],["Lifetime",b.life]].map(([k,v])=>`<dt>${k}</dt><dd>${esc(v)}</dd>`).join("")+(S.imageUrl?`<dt>Image</dt><dd><img src="${S.imageUrl}" alt="Uploaded design" style="max-width:110px;border-radius:10px;border:1px solid var(--line);background:#fff"></dd>`:"")}
 
 /* ============ interview ============ */
 function addMsg(who,text,img){const d=document.createElement("div");d.className="msg "+who;d.textContent=text;if(img){const i=document.createElement("img");i.src=img;i.alt="Attached image";d.appendChild(i)}$("#msgs").appendChild(d);if(who==="ai"){markCurrent(d);showMsg(d)}else $("#msgs").scrollTop=1e9;S.display.push({who,text});return d}
@@ -1006,7 +1071,8 @@ function regionsFor(sold){if(!sold)return[];if(isEU(sold))return["EU"];return{"I
  const REGION_NAME={EU:"European Union",DE:"Germany",INTL:"International / national",IN:"India",UK:"United Kingdom",US:"United States"};
 function regsFor(cat,sold){const out=[];regionsFor(sold).forEach(r=>{const db=REGS[r];[...(db.all||[]),...(db[cat]||[])].forEach(x=>out.push({region:r==="INTL"?sold+" (national rules)":REGION_NAME[r],...x}))});if(!out.length)out.push({region:sold,name:"Local product safety and labelling law",applies:"Your market",action:"Ask a local test lab or chamber of commerce which rules apply",status:"Check"});return out}
 function stdFor(cat){return[...(STD_CAT[cat]||[]),...STD_ALL].map(([code,title,use])=>({code,title,use}))}
-function vendorsFor(cat,made,sold){const v=[],place=made==="Not sure"?sold:made,cl=(CLUSTERS[place]||{})[cat];
+function vendorsFor(cat,made,sold){const v=[],place=madeKnown(made)?made:sold,cl=(CLUSTERS[place]||{})[cat];
+  if(made===MADE_BEST)v.push({country:"Worldwide",where:BEST_REGIONS[cat]||BEST_REGIONS.Other,what:`Strong manufacturing regions for this category. Compare cost, skills, lead time and distance to ${sold||"your market"}: making it close to the market cuts transport emissions and delivery time.`});
   if(place==="India")v.push({country:"India",where:"IndiaMART and TradeIndia supplier directories",what:"Workshops and material suppliers; ask for BIS licence numbers where required"});
   if(isEU(place))v.push({country:EU_COUNTRIES.has(place)?place:"EU",where:"wlw.de (Wer liefert was) and Europages",what:"B2B suppliers by material and process; local chambers of commerce (IHK) keep supplier lists"});
   if(place==="China")v.push({country:"China",where:"Verified suppliers on large B2B platforms",what:"Request third-party factory audits and material test reports"});
@@ -1065,7 +1131,7 @@ RULES
 - Emission factors: give conservative cradle-to-gate ranges in kg CO2e per kg, typical of public databases (e.g. ICE). Use null if data is too uncertain.
 - Estimate a realistic weight in kg for each material part (whole product total should be plausible${b.weight?`; the user guessed ${b.weight} kg total`:""}).
 - Regulations: name real laws and standards that apply to this category in ${b.sold}. Mark status "Mandatory", "Voluntary" or "Check". Do not invent laws; if unsure, use "Check".
-- Vendors: suggest supplier TYPES, directories and manufacturing regions for ${b.made==="Not sure"?b.sold:b.made}. Do NOT invent company names.
+- Vendors: suggest supplier TYPES, directories and manufacturing regions for ${madeKnown(b.made)?b.made:b.made===MADE_BEST?"the best places worldwide for this category (the user asked RoopLab to choose; compare cost, skills, lead time and distance to "+b.sold+")":b.sold+" (made-in country not decided yet)"}. Do NOT invent company names.
 - Never present costs, emissions or legal requirements as verified; the page shows a disclaimer.
 
 Reply with only one JSON object with exactly these keys:
@@ -1210,7 +1276,7 @@ function reportHTML(){const X=rpExtra(S.analysis),a=S.analysis,b=S.brief,idx=avg
 <div class="cover"><div><div class="eb">RoopLab · In-depth circular product design report${S.demo?" · Demonstration example":""}</div><h1>${esc(b.name)}</h1><p class="pitch">${esc(a.pitch)}</p>
 ${S.imageUrl?`<img src="${S.imageUrl}" alt="" style="max-width:280px;max-height:280px;margin:22px 0;border-radius:12px;border:1px solid #E3E8F2">`:""}
 <div class="kpi"><div><b>${fmt(C.lo)}–${fmt(C.hi)}</b>kg CO₂e, materials</div><div><b>${M?M.mci.toFixed(2):"–"}</b>circularity (0 to 1)</div><div><b>${fmt(a.lifetimeYears)} yrs</b>target lifetime</div><div><b>${idx==null?"–":idx.toFixed(1)}/5</b>circular design index</div></div></div>
-<div><p style="color:#5A6780">${esc(catLabel(b))} · ${esc(b.sub)} · ${date}</p><div class="meta"><div><b>Target group</b>${esc(b.target)}</div><div><b>Market</b>${esc(b.sold)}</div><div><b>Made in</b>${esc(b.made)}</div><div><b>Quality / budget</b>${esc(b.tier)} · ${esc(budgetText(b))}</div></div></div></div>
+<div><p style="color:#5A6780">${esc(catLabel(b))} · ${esc(b.sub)} · ${date}</p><div class="meta"><div><b>Target group</b>${esc(b.target)}</div><div><b>Market</b>${esc(b.sold)}</div><div><b>Made in</b>${esc(madeLabel(b))}</div><div><b>Quality / budget</b>${esc(b.tier)} · ${esc(budgetText(b))}</div></div></div></div>
 <div class="box avoid" style="margin-top:18px"><h3>Contents</h3><p style="columns:2;font-size:11px">1 Summary · 2 Brief · 3 Users and needs · 4 Interview findings · 5 Quality specification · 6 Material selection · 7 Carbon footprint · 8 Circularity and lifespan · 9 Circular strategies and comparison · 10 Rules and regulations · 11 Standards and suppliers · 12 Business model · 13 Concepts · 14 Circular design check · 15 Parts and product passport · 16 Stakeholders and life journey · 17 Decision log · 18 Risks and roadmap · 19 Next steps · 20 Method, data and limits · Appendix: interview</p></div><h2>Summary</h2><p>${esc(a.summary)}</p><p><b>Chosen direction:</b> Option ${"ABC"[S.pick]}, ${esc(c.name)}. ${esc(c.idea)}</p>
 <h2>Brief</h2><table><tbody>${[["Idea",b.idea||"–"],["Main circular goal",b.priority],["Target lifetime",b.life&&b.life!=="Not sure"?b.life:fmt(a.lifetimeYears)+" years (from the interview)"],["Weight guess",b.weight?b.weight+" kg":"–"]].map(([k,v])=>`<tr><td style="width:28%"><b>${k}</b></td><td>${esc(v)}</td></tr>`).join("")}</tbody></table>
 <h2>Users and needs</h2><div class="two"><div><h3>${esc(a.persona.name)}</h3><p>${esc(a.persona.description)}</p><ul>${li(a.persona.needs)}</ul></div><table><thead><tr><th>Need</th><th>Priority</th></tr></thead><tbody>${a.needs.map(n=>`<tr><td>${esc(n.need)}</td><td>${n.priority}</td></tr>`).join("")}</tbody></table></div>
@@ -1275,7 +1341,7 @@ function rLadderOf(a){const t=factText(a),M=mciOf(a),rep=avg(a.materials.map(m=>
 function bizOf(a){const b=S.brief,mid=b.min&&b.max?(+b.min+ +b.max)/2:(+b.max||+b.min||null),reuse=/reuse|take|resale|resell|buy-back|trade|refurb/i.test(factText(a));
   return{valueProp:a.pitch,customers:b.target,channels:["Own online shop","Retail or institutional partners","Social media and communities"],revenue:["Product sales","Spare parts and upgrades",...(reuse?["Take-back, refurbishing and resale"]:[]),"Repair service"],costs:["Materials","Manufacturing and assembly","Testing and certification","Packaging and shipping",...(reuse?["Take-back logistics"]:[])],partners:a.stakeholders.map(s=>s.who).filter(w=>!/user|designer|business/i.test(w)),activities:["Design and testing","Supplier management","Spare-part and repair service"],
     economics:mid?{price:mid,costLow:Math.round(mid*0.35),costHigh:Math.round(mid*0.5)}:null}}
-function socialOf(){const b=S.brief,place=b.made==="Not sure"?b.sold:b.made,jew=b.category==="Jewellery and accessories";
+function socialOf(){const b=S.brief,place=madePlace(b),jew=b.category==="Jewellery and accessories";
   return[{area:"Workers",note:!STRONG_LABOUR.has(place)?"Visit workshops; check safety, fair wages, working hours and no child labour. Ask for SA8000 or amfori BSCI audits.":"Labour law is strong; focus on how raw materials are sourced further up the supply chain."},
    {area:"Raw materials",note:jew?"Recycled metals avoid mining risks such as unsafe artisanal mines. The RJC Code of Practices covers ethics in jewellery supply chains.":"Recycled and certified materials (FSC, GRS, RWS) reduce risks of deforestation and poor working conditions."},
    {area:"Users",note:"Design for different bodies and abilities: clear instructions, safe edges and repair that needs no special skills."},
@@ -1298,7 +1364,7 @@ function claimsOf(a){const b=S.brief,M=mciOf(a),C=carbonOf(a),rep=avg(a.material
   return{law,items:out}}
 const VCLS={"Allowed with proof":"Voluntary","Only if specific":"Check","Not yet":"Check","Avoid":"Mandatory"};
 function dppOf(a){const b=S.brief,M=mciOf(a),C=carbonOf(a),mass=C.mass||1,id="SAMPLE-"+slug(b.name).replace(/-/g,"").toUpperCase().slice(0,6)+"-001",certs=[...new Set(a.materials.flatMap(m=>m.certifications))];
-  return{id,rows:[["Product",`${b.name} (${b.sub})`],["Passport ID",id+" (sample, not registered)"],["Manufacturer","To be added"],["Made in",b.made],["Materials",a.materials.map(m=>`${m.name} ${Math.round(m.weightKg/mass*100)}%`).join(" · ")],["Recycled content",M?Math.round(M.recycled*100)+"% by weight":"–"],["Carbon (materials)",`${fmt(C.lo)}–${fmt(C.hi)} kg CO₂e, indicative`],["Expected lifetime",fmt(a.lifetimeYears)+" years"],["Spare parts",bomOf(a).filter(p=>p.minutes<=2).map(p=>p.part).join(", ")||"–"],["Disassembly tools",[...new Set(bomOf(a).map(p=>p.tool).filter(t=>t&&!/^none$/i.test(t)))].join(", ")||"None"],["End of life",a.lifecycle.endOfLife],["Compliance",a.regulations.filter(r=>r.status==="Mandatory").map(r=>shortName(r.name)).slice(0,5).join("; ")],["Certifications",certs.join(", ")||"–"]]}}
+  return{id,rows:[["Product",`${b.name} (${b.sub})`],["Passport ID",id+" (sample, not registered)"],["Manufacturer","To be added"],["Made in",madeKnown(b.made)?b.made:"To be decided"],["Materials",a.materials.map(m=>`${m.name} ${Math.round(m.weightKg/mass*100)}%`).join(" · ")],["Recycled content",M?Math.round(M.recycled*100)+"% by weight":"–"],["Carbon (materials)",`${fmt(C.lo)}–${fmt(C.hi)} kg CO₂e, indicative`],["Expected lifetime",fmt(a.lifetimeYears)+" years"],["Spare parts",bomOf(a).filter(p=>p.minutes<=2).map(p=>p.part).join(", ")||"–"],["Disassembly tools",[...new Set(bomOf(a).map(p=>p.tool).filter(t=>t&&!/^none$/i.test(t)))].join(", ")||"None"],["End of life",a.lifecycle.endOfLife],["Compliance",a.regulations.filter(r=>r.status==="Mandatory").map(r=>shortName(r.name)).slice(0,5).join("; ")],["Certifications",certs.join(", ")||"–"]]}}
 function qrSVG(seed){let h=0;for(const ch of seed)h=(h*31+ch.charCodeAt(0))>>>0;const n=21,c=6;let s=`<svg viewBox="0 0 ${n*c} ${n*c}" width="110" height="110" xmlns="http://www.w3.org/2000/svg" aria-label="Sample QR code"><rect width="100%" height="100%" fill="#fff"/>`;
   const finder=(x,y)=>`<rect x="${x*c}" y="${y*c}" width="${7*c}" height="${7*c}" fill="#0B1B33"/><rect x="${(x+1)*c}" y="${(y+1)*c}" width="${5*c}" height="${5*c}" fill="#fff"/><rect x="${(x+2)*c}" y="${(y+2)*c}" width="${3*c}" height="${3*c}" fill="#0B1B33"/>`;
   for(let y=0;y<n;y++)for(let x=0;x<n;x++){if((x<8&&y<8)||(x>12&&y<8)||(x<8&&y>12))continue;h=(h*1103515245+12345)>>>0;if(h%3===0)s+=`<rect x="${x*c}" y="${y*c}" width="${c}" height="${c}" fill="#0B1B33"/>`}
@@ -1333,7 +1399,23 @@ function exPassportHTML(a){const p=dppOf(a),bom=bomOf(a),total=bom.reduce((s,x)=
 function exRiskHTML(a){const r=risksOf(a),rm=roadmapOf(a);let cells="";for(let im=3;im>=1;im--)for(let l=1;l<=3;l++){const here=r.map((x,i)=>x.l===l&&x.i===im?i+1:0).filter(Boolean),sev=l*im;cells+=`<div class="cell s${sev>=6?3:sev>=3?2:1}">${here.map(n=>`<b>${n}</b>`).join("")}</div>`}
   return`<div class="an-sec" id="an-next"><div class="row between"><h2 class="h2s">Risks and roadmap</h2></div><div class="grid g2"><div><div class="label">Risk matrix</div><div class="matrix-wrap"><div class="axis-y">Impact →</div><div class="matrix">${cells}</div></div><div class="tiny muted" style="text-align:center;margin-top:4px">Likelihood →</div><ol class="lst small" style="margin-top:10px">${r.map(x=>`<li>${esc(x.risk)}</li>`).join("")}</ol></div>
   <div><div class="label">Roadmap</div><div class="road">${rm.map(([w,t,d])=>`<div><span class="tiny muted">${w}</span><strong>${t}</strong><p class="small muted">${esc(d)}</p></div>`).join("")}</div></div></div></div>`}
-function anNavHTML(){return`<nav class="an-nav" aria-label="Analysis sections">${[["an-top","Overview"],["an-materials","Materials"],["an-carbon","Carbon and circularity"],["an-circular","Circular strategies"],["an-compare","Comparison"],["an-rules","Rules"],["an-business","Business"],["an-concepts","Concepts"],["an-check","11 criteria"],["an-dpp","Parts and passport"],["an-next","Risks and roadmap"]].map(([id,l])=>`<button type="button" data-jump="${id}">${l}</button>`).join("")}</nav>`}
+const AN_TABS=[["overview","Overview",["an-top"]],["materials","Materials",["an-materials","an-carbon"]],["circular","Circularity",["an-circular","an-compare","an-check"]],["rules","Rules",["an-rules"]],["business","Business",["an-business","an-concepts"]],["roadmap","Roadmap",["an-dpp","an-next"]]];
+let anTab="overview";
+function anNavHTML(){return`<nav class="an-nav an-tabs" role="tablist" aria-label="Analysis sections">${AN_TABS.map(([k,l],i)=>`<button type="button" role="tab" data-antab="${k}"><span class="tn">${i+1}</span>${l}</button>`).join("")}<button type="button" class="an-all" data-antab="all">Show all</button></nav>`}
+function anGroup(){const map={};AN_TABS.forEach(([k,,ids])=>ids.forEach(id=>map[id]=k));let g=null;[...$("#anBody").children].forEach(el=>{if(el.id&&map[el.id])g=map[el.id];if(g)el.dataset.tab=g})}
+function anShow(t,scroll){const body=$("#anBody"),pg=$("#anPager");if(!body.children.length){pg.hidden=true;return}anTab=t;anGroup();
+  body.querySelectorAll("[data-tab]").forEach(el=>el.classList.toggle("an-off",t!=="all"&&el.dataset.tab!==t));
+  body.querySelectorAll(".an-tabs [data-antab]").forEach(b=>{const on=b.dataset.antab===t;b.classList.toggle("on",on);b.setAttribute("aria-selected",on)});
+  const i=AN_TABS.findIndex(x=>x[0]===t);if(i<0){pg.hidden=true}else{const p=AN_TABS[i-1],n=AN_TABS[i+1];pg.hidden=false;pg.innerHTML=`${p?`<button class="btn ghost" type="button" data-antab="${p[0]}">← ${p[1]}</button>`:"<span></span>"}<span class="tiny muted">Part ${i+1} of ${AN_TABS.length}</span>${n?`<button class="btn primary" type="button" data-antab="${n[0]}">Next: ${n[1]} →</button>`:`<button class="btn primary" type="button" data-stage="report">View report →</button>`}`}
+  if(scroll)window.scrollTo({top:Math.max(0,body.getBoundingClientRect().top+scrollY-80),behavior:"smooth"})}
+document.addEventListener("click",e=>{const b=e.target.closest("[data-antab]");if(b){e.preventDefault();anShow(b.dataset.antab,true)}});
+new MutationObserver(()=>{if(!$("#anBody").children.length){anTab="overview";$("#anPager").hidden=true}else anShow(anTab)}).observe($("#anBody"),{childList:true});
+/* nav "More" menu */
+(function(){const d=$("#navMore");if(!d)return;document.addEventListener("click",e=>{if(!d.contains(e.target)||e.target.closest(".navdrop a"))d.open=false});document.addEventListener("keydown",e=>{if(e.key==="Escape")d.open=false})})();
+/* sub-category suggestions */
+const SUBS={Furniture:["Study chair","Office chair","Desk","Shelf","Stool","Bed frame","Side table"],"Jewellery and accessories":["Ring","Stacking ring","Necklace","Earrings","Bracelet","Watch strap"],Toy:["Wooden toy car","Building blocks","Puzzle","Soft toy","Board game"],Electronics:["Bluetooth speaker","Headphones","Charger","Smart home device"],"Phone and tech accessories":["Phone case","Laptop sleeve","Tablet case","Earbud case","Charging cable"],Lighting:["Desk lamp","Floor lamp","Pendant light","Wall light"],"Kitchen and home":["Water bottle","Coffee mug","Cutting board","Storage box","Cookware"],"Bag and textile":["Backpack","Tote bag","Wallet","Jacket","T-shirt"],Packaging:["Shipping box","Food container","Gift box","Mailer bag"],"Sports and outdoor":["Yoga mat","Bike accessory","Sports bottle","Camping gear"]};
+function fillSubs(){const l=SUBS[$("#b-cat").value]||[];$("#subList").innerHTML=l.map(s=>`<option value="${s}">`).join("")}
+$("#b-cat").addEventListener("change",fillSubs);
 document.addEventListener("click",e=>{const j=e.target.closest("[data-jump]");if(j){const el=document.getElementById(j.dataset.jump);if(el)el.scrollIntoView({behavior:"smooth",block:"start"})}});
 
 /* ---------- report blocks ---------- */
@@ -1523,8 +1605,8 @@ function sketchAny(kind){if(kind==="chair"||kind==="ring")return sketch(kind);re
 
 /* ============ static content ============ */
 function demoPreviewData(kind){const D=DEMOS[kind],b=D.brief,a=JSON.parse(JSON.stringify(D.analysis));a.regulations=regsFor(b.category,b.sold);return{b,a,C:carbonOf(a),M:mciOf(a)}}
-function caseCard(kind){if(!DEMOS[kind])return"";const {b,a,C,M}=demoPreviewData(kind);return`<div class="card case-card"><div class="art"><img src="${sketchAny(kind)}" alt="Sketch of ${esc(b.name)}"></div><div class="body"><span class="label">${esc(b.category)} · ${esc(b.tier)} · sold in ${esc(b.sold)}</span><h3 style="font-size:21px;font-weight:600;font-family:var(--font-display);letter-spacing:-.02em">${esc(b.name)}</h3><p class="small muted">${esc(a.pitch)}</p><div class="preview"><div class="row3"><div><b>${fmt(C.lo)}–${fmt(C.hi)}</b><span class="tiny muted">kg CO₂e</span></div><div><b>${M.mci.toFixed(2)}</b><span class="tiny muted">circularity</span></div><div><b>${a.regulations.length}</b><span class="tiny muted">rules to check</span></div></div></div><div class="row" style="margin-top:6px"><button class="btn sm primary" type="button" data-demo="${kind}">Play this case</button><span class="tiny muted">22 questions in about 40 seconds</span></div></div></div>`}
-function heroPreview(){const {b,a,C,M}=demoPreviewData("chair");return`<div class="row between"><span class="label">Example report</span><span class="pill acc">Kairo study chair</span></div><h3 style="font-family:var(--font-display);font-weight:600;letter-spacing:-.02em;font-size:28px;line-height:1.1">${esc(a.pitch.split(".")[0])}.</h3><div class="row3"><div><b>${fmt(C.lo)}–${fmt(C.hi)}</b><span class="tiny muted">kg CO₂e, materials</span></div><div><b>${M.mci.toFixed(2)}</b><span class="tiny muted">circularity score</span></div><div><b>${a.regulations.filter(r=>r.status==="Mandatory").length}</b><span class="tiny muted">mandatory rules, Germany</span></div></div><table class="t"><tbody>${a.materials.slice(0,3).map(m=>`<tr><td>${esc(m.name)}</td><td class="tiny muted">${m.recycledPct}% recycled</td><td class="tiny muted" style="text-align:right">${m.cf[0]}–${m.cf[1]} kg CO₂e/kg</td></tr>`).join("")}</tbody></table><button class="btn sm" type="button" data-demo="chair">Play the full case</button>`}
+function caseCard(kind){if(!DEMOS[kind])return"";const {b,a,C,M}=demoPreviewData(kind);return`<div class="card case-card"><div class="art"><img src="${sketchAny(kind)}" alt="Sketch of ${esc(b.name)}"></div><div class="body"><span class="label">${esc(b.category)} · ${esc(b.tier)} · sold in ${esc(b.sold)}</span><h3 style="font-size:20px;font-weight:600;font-family:var(--font-display);letter-spacing:-.02em">${esc(b.name)}</h3><p class="small muted">${esc(a.pitch)}</p><div class="preview"><div class="row3"><div><b>${fmt(C.lo)}–${fmt(C.hi)}</b><span class="tiny muted">kg CO₂e</span></div><div><b>${M.mci.toFixed(2)}</b><span class="tiny muted">circularity</span></div><div><b>${a.regulations.length}</b><span class="tiny muted">rules to check</span></div></div></div><div class="row" style="margin-top:6px"><button class="btn sm primary" type="button" data-demo="${kind}">Play example</button><span class="tiny muted">22 questions in about 40 seconds</span></div></div></div>`}
+function heroPreview(){const {b,a,C,M}=demoPreviewData("chair");return`<div class="row between"><span class="label">Example report</span><span class="pill acc">Kairo study chair</span></div><h3 style="font-family:var(--font-display);font-weight:600;letter-spacing:-.02em;font-size:24px;line-height:1.15">${esc(a.pitch.split(".")[0])}.</h3><div class="row3"><div><b>${fmt(C.lo)}–${fmt(C.hi)}</b><span class="tiny muted">kg CO₂e, materials</span></div><div><b>${M.mci.toFixed(2)}</b><span class="tiny muted">circularity score</span></div><div><b>${a.regulations.filter(r=>r.status==="Mandatory").length}</b><span class="tiny muted">mandatory rules, Germany</span></div></div><img class="hero-sketch" src="${sketchAny("chair")}" alt="Sketch of the Kairo study chair"><button class="btn sm" type="button" data-demo="chair">Play example</button>`}
 $("#homeCases").innerHTML=caseCard("chair")+caseCard("ring");$("#caseCards").innerHTML=["chair","ring","lamp","toy","bag"].map(caseCard).join("");$("#heroPreview").innerHTML=heroPreview();
 $("#diamond").innerHTML=diamondSVG();$("#featureMap").innerHTML=featureMapSVG();
 $("#personas").innerHTML=PERSONAS.map(p=>`<div class="card persona"><div class="row"><div class="ava" aria-hidden="true">${p.i}</div><div><h3>${esc(p.name)}</h3><p class="tiny muted">${esc(p.where)} · ${esc(p.role)}</p></div></div><p class="small"><strong>Idea:</strong> ${esc(p.idea)}</p><p class="small"><strong>Needs:</strong> ${esc(p.need)}</p><p class="small muted"><strong style="color:var(--ink)">Pain:</strong> ${esc(p.pain)}</p><span class="pill" style="align-self:flex-start">Proto-persona · hypothetical</span></div>`).join("");
